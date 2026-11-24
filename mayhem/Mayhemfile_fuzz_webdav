@@ -1,0 +1,9 @@
+project: savantenvs/JKSV
+target: fuzz_webdav
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_webdav/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_webdav
+    libfuzzer: true
+    timeout: 5

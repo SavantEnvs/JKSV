@@ -1,0 +1,9 @@
+project: savantenvs/JKSV
+target: fuzz_googledrive
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_googledrive/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_googledrive
+    libfuzzer: true
+    timeout: 5

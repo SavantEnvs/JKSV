@@ -1,0 +1,9 @@
+project: savantenvs/JKSV
+target: fuzz_dictionary
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dictionary/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dictionary
+    libfuzzer: true
+    timeout: 5
